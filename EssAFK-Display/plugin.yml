@@ -1,0 +1,11 @@
+name: ExAFK
+version: 1.0.3
+author: Jackerugo
+description: Displays titles and/or effects to players that are AFK.
+main: me.exafk.Main
+website: https://www.paypal.com/donate/?hosted_button_id=4TKX2F2K826NU
+depend: [Essentials]
+softdepend: [PlaceholderAPI]
+commands:
+  exafk:
+    description: Base command for ExAFK.
