@@ -1,9 +1,8 @@
 # This is the duration that the titles/effects will be displayed to a player in seconds.
 # This setting is for servers that have set Essentials to kick players if AFK for a certain amount of time.
 # Times are in seconds - default is 600 (10 minutes)
-afk-duration:
-  title: 600
-  effect: 600
+# This is now used for titles/effects/countdown duration
+afk-timeout: 600
   
 # Settings for titles
 # return-stay is duration the welcome back title is displayed for.
@@ -43,7 +42,13 @@ return-messages:
   
 # The effect given to players when AFK.
 afk-effect:
+  enabled: true
   effect: 'BLINDNESS'
+  
+afk-sounds:
+  enabled: true
+  afk: 'UI_CARTOGRAPHY_TABLE_TAKE_RESULT'
+  return: 'UI_LOOM_SELECT_PATTERN'
   
 plugin-messages:
   config-reloaded: '&aConfiguration successfully reloaded!'
