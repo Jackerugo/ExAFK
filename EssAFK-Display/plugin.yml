@@ -1,5 +1,5 @@
 name: ExAFK
-version: 1.1
+version: 1.1.1
 author: Jackerugo
 description: Displays titles and/or effects to players that are AFK.
 main: me.exafk.Main
