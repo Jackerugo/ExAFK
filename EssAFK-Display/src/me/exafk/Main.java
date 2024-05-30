@@ -16,7 +16,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import dev.lone.itemsadder.api.FontImages.FontImageWrapper;
 import me.clip.placeholderapi.PlaceholderAPI;
 import net.ess3.api.events.AfkStatusChangeEvent;
 import net.md_5.bungee.api.ChatColor;
@@ -57,7 +56,7 @@ public class Main extends JavaPlugin implements Listener {
 		    int randomMessage = goneAFK.nextInt(listSub.size());
 		    String newMessage = (String)PlaceholderAPI.setPlaceholders(p, listSub.get(randomMessage));
 		    
-			p.sendTitle(FontImageWrapper.replaceFontImages(ChatColor.translateAlternateColorCodes('&', format(newMessageTitle))), FontImageWrapper.replaceFontImages(ChatColor.translateAlternateColorCodes('&', format(newMessage))) , titleFadein, timeout, titleFadeout);
+			p.sendTitle(ChatColor.translateAlternateColorCodes('&', format(newMessageTitle)), ChatColor.translateAlternateColorCodes('&', format(newMessage)) , titleFadein, timeout, titleFadeout);
 			
 			if (getConfig().getString("afk-effect.enabled").equalsIgnoreCase("true")) {
 				p.addPotionEffect(new PotionEffect(PotionEffectType.getByName(getConfig().getString("afk-effect.effect")), timeout, 1));
@@ -83,7 +82,7 @@ public class Main extends JavaPlugin implements Listener {
 			
 		    Integer titleReturnDuration = (getConfig().getInt("title-settings.return-stay")) * 20;
 		    
-			p.sendTitle(FontImageWrapper.replaceFontImages(ChatColor.translateAlternateColorCodes('&', format(wbTitleNewMessage))), FontImageWrapper.replaceFontImages(ChatColor.translateAlternateColorCodes('&', format(wbNewMessage))) , titleFadein, titleReturnDuration, titleFadeout);
+			p.sendTitle(ChatColor.translateAlternateColorCodes('&', format(wbTitleNewMessage)), ChatColor.translateAlternateColorCodes('&', format(wbNewMessage)) , titleFadein, titleReturnDuration, titleFadeout);
 			
 			if (getConfig().getString("afk-effect.enabled").equalsIgnoreCase("true")) {
 				p.removePotionEffect(PotionEffectType.getByName(getConfig().getString("afk-effect.effect")));
