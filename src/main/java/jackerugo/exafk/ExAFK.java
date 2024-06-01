@@ -31,7 +31,7 @@ public class ExAFK extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
         saveDefaultConfig();
 
-        boolean essentialsXAvailable = Bukkit.getPluginManager().isPluginEnabled("EssentialsX");
+        boolean essentialsXAvailable = Bukkit.getPluginManager().isPluginEnabled("Essentials");
         boolean papiAvailable = Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI");
 
         if (essentialsXAvailable){
