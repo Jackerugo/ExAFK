@@ -155,9 +155,9 @@ public class ExAFK extends JavaPlugin implements Listener {
                         player.sendTitle("§f ", ChatColor.translateAlternateColorCodes('&', format(getConfig().getString("plugin-messages.no-permission"))), 10, 40, 20);
                     }
                 }
+            } else {
+                Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes("&".toCharArray()[0], "&9[ExAFK] &7commands must be used in-game only!"));
             }
-        } else {
-            Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes("&".toCharArray()[0], "&9[ExAFK] &7commands must be used in-game only!"));
         }
         return false;
     }
