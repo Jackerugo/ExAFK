@@ -25,8 +25,32 @@ public class ExAFK extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable(){
+
+        long startTime = System.currentTimeMillis();
+
         getServer().getPluginManager().registerEvents(this, this);
         saveDefaultConfig();
+
+        boolean essentialsXAvailable = Bukkit.getPluginManager().isPluginEnabled("EssentialsX");
+        boolean papiAvailable = Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI");
+
+        if (essentialsXAvailable){
+            getLogger().info("Successfully hooked into EssentialsX.");
+        } else {
+            getLogger().warning("Unabled to hook into EssentialsX as it isn't installed. ExAFK will not be loaded.");
+            getServer().getPluginManager().disablePlugin(this);
+        }
+
+        if (papiAvailable){
+            getLogger().info("Successfully hooked into PlaceholderAPI.");
+        } else {
+            getLogger().info("PlaceholderAPI wasn't found. This isn't required but allows additional customisation!");
+        }
+
+        if (getServer().getPluginManager().isPluginEnabled(this)) {
+            getLogger().info("Successfully loaded! Took " + (System.currentTimeMillis() - startTime) + "ms.");
+        }
+
     }
 
     public void RemoveAFKEffect(PlayerJoinEvent e) {
