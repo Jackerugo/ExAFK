@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
@@ -51,6 +52,9 @@ public class ExAFK extends JavaPlugin implements Listener {
         if (getServer().getPluginManager().isPluginEnabled(this)) {
             getLogger().info("Successfully loaded! Took " + (System.currentTimeMillis() - startTime) + "ms.");
         }
+
+        int pluginId = 22098; // <-- Replace with the id of your plugin!
+        Metrics metrics = new Metrics(this, pluginId);
 
     }
 
