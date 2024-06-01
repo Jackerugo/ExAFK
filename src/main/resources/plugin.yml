@@ -1,0 +1,11 @@
+name: ExAFK
+version: '${project.version}'
+author: Jackerugo
+description: Displays titles and/or effects to players that are AFK.
+main: jackerugo.exafk.ExAFK
+api-version: '1.20'
+depend: [Essentials]
+softdepend: [PlaceholderAPI]
+commands:
+  exafk:
+    description: Base command for ExAFK.

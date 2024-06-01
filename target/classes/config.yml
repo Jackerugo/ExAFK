@@ -1,0 +1,55 @@
+# This is the duration that the titles/effects will be displayed to a player in seconds.
+# This setting is for servers that have set Essentials to kick players if AFK for a certain amount of time.
+# Times are in seconds - default is 600 (10 minutes)
+# This is now used for titles/effects/countdown duration
+afk-timeout: 600
+
+# Settings for titles
+# return-stay is duration the welcome back title is displayed for.
+# Times are in seconds
+title-settings:
+  fade-in: 1
+  fade-out: 2
+  return-stay: 4
+
+# Force player to run a command upon afk status change.
+# Useful for toggling things such as scoreboards.
+player-command:
+  enabled: false
+  initial-command: 'fb toggle'
+  return-command: 'fb toggle'
+
+# These are the messages that will be randomly displayed when a player goes AFK.
+# Default colour codes and hex colours are supported use #<code>
+# If you just want a subtitle to be displayed, simply set one title message with line '&f '
+afk-messages:
+  titles:
+    - '&#458a43You''ve gone AFK!'
+  subtitles:
+    - '&#79bd77AFK, again?'
+    - '&bAre you coming back?'
+    - '&#79bd77Hey... where''d you go?'
+
+# These are the messages shown when a player returns from being AFK.
+# Default colour codes and hex colours are supported use #<code>
+# If you just want a subtitle to be displayed, simply set one title message with line '&f '
+return-messages:
+  titles:
+    - '&#458a43You''re no longer AFK!'
+  subtitles:
+    - '&#79bd77Welcome back, we missed you!'
+    - '&aYay, you''re back!'
+
+# The effect given to players when AFK.
+afk-effect:
+  enabled: true
+  effect: 'BLINDNESS'
+
+afk-sounds:
+  enabled: true
+  afk: 'UI_CARTOGRAPHY_TABLE_TAKE_RESULT'
+  return: 'UI_LOOM_SELECT_PATTERN'
+
+plugin-messages:
+  config-reloaded: '&aConfiguration successfully reloaded!'
+  no-permission: '&cYou aren''t allowed to do that!'
