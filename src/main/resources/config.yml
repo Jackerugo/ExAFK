@@ -1,3 +1,5 @@
+bstats: true
+
 # This is the duration that the titles/effects will be displayed to a player in seconds.
 # This setting is for servers that have set Essentials to kick players if AFK for a certain amount of time.
 # Times are in seconds - default is 600 (10 minutes)
