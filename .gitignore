@@ -1,11 +1,7 @@
 ### Maven template
 /target/**
 /.idea/**
-.idea/ExAFK.iml
-.idea/encodings.xml
-.idea/.gitignore
-.idea/modules.xml
-.idea/compiler.xml
+.idea
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
