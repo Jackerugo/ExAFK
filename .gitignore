@@ -1,9 +1,10 @@
 ### Maven template
-target/
+/target/**
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
+ExAFK.iml
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
@@ -16,4 +17,3 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
-
