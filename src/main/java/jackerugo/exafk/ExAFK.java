@@ -44,7 +44,8 @@ public class ExAFK extends JavaPlugin implements Listener {
         if (papiAvailable){
             getLogger().info("Successfully hooked into PlaceholderAPI.");
         } else {
-            getLogger().info("PlaceholderAPI wasn't found. This isn't required but allows additional customisation!");
+            getLogger().warning("Unabled to hook into PlaceholderAPI as it isn't installed. ExAFK will not be loaded.");
+            getServer().getPluginManager().disablePlugin(this);
         }
 
         if (getServer().getPluginManager().isPluginEnabled(this)) {
