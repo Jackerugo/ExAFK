@@ -23,9 +23,9 @@
 # ExAFK
 
 
-> ExAFK is a simple, lightweight AFK display that hooks into the EssentialsX AFK system. It shows titles, subtitles and gives players an effects if they go AFK manually using /afk or if they go AFK automatically set by the EssentialsX config. You can set one single message for each or multiple (as shown in config below), which will then choose a message at random.
+> ExAFK is a simple, lightweight AFK display that hooks into the EssentialsX AFK system. It shows titles, subtitles and gives players an effect if they go AFK manually using /afk or if they go AFK automatically set by the EssentialsX config. You can set one single message for each or multiple, which will then choose a message at random for each AFK status change.
 
-> Also supports hex colours in titles/subtitles allowing full customisation of messages!
+> Also supports hex colours in titles/subtitles and PlaceholderAPI, allowing full customisation of messages!
 
 ## Video Preview
 [![Video Preview](https://img.youtube.com/vi/2duTRidKfQM/0.jpg)](https://www.youtube.com/watch?v=2duTRidKfQM)
