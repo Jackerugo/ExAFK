@@ -11,13 +11,16 @@
 
 ## COMMANDS
 > /exafk - show plugin version/info
+
 > /exafk reload - reloads config file
 
 ## PERMISSIONS
 > exafk.reload - /exafk reload
 
 ## Building with Maven
-> git clone https://github.com/Jackerugo/ExAFK.git
-> cd ExAFK
-> mvn clean install
+```
+git clone https://github.com/Jackerugo/ExAFK.git
+cd ExAFK
+mvn clean install
+```
 
