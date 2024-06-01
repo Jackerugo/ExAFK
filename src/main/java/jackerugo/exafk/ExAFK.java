@@ -133,6 +133,7 @@ public class ExAFK extends JavaPlugin implements Listener {
 
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if(cmd.getName().equalsIgnoreCase("exafk")) {
+            Player player = (Player) sender;
             if (args.length < 1){
                 sender.sendMessage("§f ");
                 sender.sendMessage(" §9§lExAFK " + this.getDescription().getVersion() + " §7Developed by Jackerugo");
