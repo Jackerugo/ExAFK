@@ -133,7 +133,6 @@ public class ExAFK extends JavaPlugin implements Listener {
 
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if(cmd.getName().equalsIgnoreCase("exafk")) {
-            Player player = (Player) sender;
             if (args.length < 1){
                 sender.sendMessage("§f ");
                 sender.sendMessage(" §9§lExAFK " + this.getDescription().getVersion() + " §7Developed by Jackerugo");
@@ -146,10 +145,12 @@ public class ExAFK extends JavaPlugin implements Listener {
                     if(args[0].equalsIgnoreCase("reload")) {
                         reloadConfig();
                         Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes("&".toCharArray()[0], "&9[ExAFK] &7config.yml has been reloaded successfully!"));
-                        player.sendTitle("§f ", ChatColor.translateAlternateColorCodes('&', format(getConfig().getString("plugin-messages.config-reloaded"))) , 10, 40, 20);
+                        if (sender instanceof Player) {
+                            player.sendTitle("§f ", ChatColor.translateAlternateColorCodes('&', format(getConfig().getString("plugin-messages.config-reloaded"))), 10, 40, 20);
+                        }
                     }
                 } else {
-                    player.sendTitle("§f ", ChatColor.translateAlternateColorCodes('&', format(getConfig().getString("plugin-messages.no-permission"))) , 10, 40, 20);
+                        player.sendTitle("§f ", ChatColor.translateAlternateColorCodes('&', format(getConfig().getString("plugin-messages.no-permission"))), 10, 40, 20);
                 }
             }
         }
