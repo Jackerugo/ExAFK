@@ -1,11 +1,23 @@
 ![Banner](https://imgur.com/5qWVg3Y.png) 
 <p align="center">
+  <a href="https://github.com/Jackerugo/ExAFK/blob/master/LICENSE">
 <img src ="https://img.shields.io/github/license/Jackerugo/ExAFK.svg"/>
+  </a>
+  <a href="https://github.com/Jackerugo/ExAFK/releases">
 <img src ="https://img.shields.io/github/release/Jackerugo/ExAFK.svg"/>
+  </a>
+  <a href="https://github.com/Jackerugo/ExAFK/issues">
 <img src ="https://img.shields.io/github/issues/Jackerugo/ExAFK.svg"/>
+  </a>
+  <a href="https://github.com/Jackerugo/ExAFK/stargazers">
 <img src ="https://img.shields.io/github/stars/Jackerugo/ExAFK.svg"/>
+  </a>
+  <a href="https://github.com/Jackerugo/ExAFK/network">
 <img src ="https://img.shields.io/github/forks/Jackerugo/ExAFK.svg"/>
+  </a>
+  <a href="https://github.com/Jackerugo/ExAFK/contributors">
 <img src ="https://img.shields.io/github/contributors/Jackerugo/ExAFK.svg"/>
+  </a>
 </p>
 
 # ExAFK
