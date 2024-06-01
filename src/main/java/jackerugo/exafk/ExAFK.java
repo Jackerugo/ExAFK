@@ -133,27 +133,31 @@ public class ExAFK extends JavaPlugin implements Listener {
 
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if(cmd.getName().equalsIgnoreCase("exafk")) {
-            Player player = (Player) sender;
-            if (args.length < 1){
-                sender.sendMessage("§f ");
-                sender.sendMessage(" §9§lExAFK " + this.getDescription().getVersion() + " §7Developed by Jackerugo");
-                if (sender.hasPermission("exafk.reload")){
-                    sender.sendMessage(" §c/exafk reload §7- §eReload configuration file");
-                }
-                sender.sendMessage("§f ");
-            } else {
-                if (sender.hasPermission("exafk.reload")){
-                    if(args[0].equalsIgnoreCase("reload")) {
-                        reloadConfig();
-                        Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes("&".toCharArray()[0], "&9[ExAFK] &7config.yml has been reloaded successfully!"));
-                        if (sender instanceof Player) {
-                            player.sendTitle("§f ", ChatColor.translateAlternateColorCodes('&', format(getConfig().getString("plugin-messages.config-reloaded"))), 10, 40, 20);
-                        }
+            if (sender instanceof Player) {
+                Player player = (Player) sender;
+                if (args.length < 1) {
+                    sender.sendMessage("§f ");
+                    sender.sendMessage(" §9§lExAFK " + this.getDescription().getVersion() + " §7Developed by Jackerugo");
+                    if (sender.hasPermission("exafk.reload")) {
+                        sender.sendMessage(" §c/exafk reload §7- §eReload configuration file");
                     }
+                    sender.sendMessage("§f ");
                 } else {
+                    if (sender.hasPermission("exafk.reload")) {
+                        if (args[0].equalsIgnoreCase("reload")) {
+                            reloadConfig();
+                            Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes("&".toCharArray()[0], "&9[ExAFK] &7config.yml has been reloaded successfully!"));
+
+                            player.sendTitle("§f ", ChatColor.translateAlternateColorCodes('&', format(getConfig().getString("plugin-messages.config-reloaded"))), 10, 40, 20);
+
+                        }
+                    } else {
                         player.sendTitle("§f ", ChatColor.translateAlternateColorCodes('&', format(getConfig().getString("plugin-messages.no-permission"))), 10, 40, 20);
+                    }
                 }
             }
+        } else {
+            Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes("&".toCharArray()[0], "&9[ExAFK] &7commands must be used in-game only!"));
         }
         return false;
     }
