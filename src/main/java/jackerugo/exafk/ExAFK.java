@@ -49,12 +49,18 @@ public class ExAFK extends JavaPlugin implements Listener {
             getServer().getPluginManager().disablePlugin(this);
         }
 
-        if (getConfig().getString("bstats").equalsIgnoreCase("true")) {
+        if(getConfig().getString("bstats") != null) {
+            if (getConfig().getString("bstats").equalsIgnoreCase("true")) {
+                int pluginId = 22098; //
+                Metrics metrics = new Metrics(this, pluginId);
+                getLogger().info("bstats logging enabled. Thank you!");
+            } else {
+                getLogger().info("bstats logging disabled.");
+            }
+        } else {
             int pluginId = 22098; //
             Metrics metrics = new Metrics(this, pluginId);
-            getLogger().info("bstats logging enabled. Thank you!");
-        } else {
-            getLogger().info("bstats logging disabled.");
+            getLogger().info("Your config is older than v1.1.2-SNAPSHOT which added bstats. This is enabled by default, please add 'bstats: false' to your config if you wish to disable this.");
         }
 
         if (getServer().getPluginManager().isPluginEnabled(this)) {
