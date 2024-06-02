@@ -20,6 +20,7 @@ import org.bukkit.potion.PotionEffectType;
 import me.clip.placeholderapi.PlaceholderAPI;
 import net.ess3.api.events.AfkStatusChangeEvent;
 import net.md_5.bungee.api.ChatColor;
+import org.jetbrains.annotations.NotNull;
 
 public class ExAFK extends JavaPlugin implements Listener {
     Integer timeout = (getConfig().getInt("afk-timeout")) * 20;
@@ -49,11 +50,11 @@ public class ExAFK extends JavaPlugin implements Listener {
             getServer().getPluginManager().disablePlugin(this);
         }
 
-        if(getConfig().contains("bstats")) {
+        if(getConfig().getString("bstats") != null) {
             if (getConfig().getString("bstats").equalsIgnoreCase("true")) {
                 int pluginId = 22098; //
                 Metrics metrics = new Metrics(this, pluginId);
-                getLogger().info("bstats logging enabled. Thank you!");
+                getLogger().info("bstats logging enabled. Thank you!" + getConfig().getString("bstats"));
             } else {
                 getLogger().info("bstats logging disabled.");
             }
@@ -142,7 +143,7 @@ public class ExAFK extends JavaPlugin implements Listener {
 
     }
 
-    public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, Command cmd, @NotNull String s, String[] args) {
         if(cmd.getName().equalsIgnoreCase("exafk")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;

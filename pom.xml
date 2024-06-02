@@ -6,7 +6,7 @@
 
   <groupId>jackerugo.exafk</groupId>
   <artifactId>ExAFK</artifactId>
-  <version>1.1.2-SNAPSHOT</version>
+  <version>1.1.2-SNAPSHOT-2</version>
   <packaging>jar</packaging>
 
   <name>ExAFK</name>
